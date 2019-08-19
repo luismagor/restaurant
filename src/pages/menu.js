@@ -1,11 +1,13 @@
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import { PageHeader } from "../utils"
+import menuImage from "../images/bcg/menuBcg.jpeg"
 
 const MenuPage = () => (
   <Layout>
     <SEO title="Menu" />
-    <h3>this is menu page</h3>
+    <PageHeader image={menuImage}>hello from menu</PageHeader>
   </Layout>
 )
 
