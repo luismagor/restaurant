@@ -42,8 +42,6 @@ const NavbarLinks = ({ navbarOpen }) => {
 
 const LinkWrapper = styled.ul`
   list-style-type: none;
-  padding: 0;
-  margin: 0;
   .nav-link {
     display: block;
     text-decoration: none;
@@ -59,7 +57,7 @@ const LinkWrapper = styled.ul`
       padding: 0.5rem 1rem 0.5rem 1.3rem;
     }
   }
-  height: ${({ open }) => (open ? "136px" : "0")};
+  height: ${({ open }) => (open ? "152px" : "0")};
   overflow: hidden;
   ${styles.transDefault};
   @media (min-width: 768px) {
