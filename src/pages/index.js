@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { HomeHeader, Banner, BannerButton } from "../utils"
 import image from "../images/bcg/homeBcg.jpeg"
+import QuickInfo from "../components/HomePageComponents/QuickInfo"
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
         <BannerButton style={{ margin: "2rem auto" }}>menu</BannerButton>
       </Banner>
     </HomeHeader>
+    <QuickInfo />
   </Layout>
 )
 
