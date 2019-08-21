@@ -1,4 +1,5 @@
 ---
+collectionType: menu-entries
 name: pancakes
 ingredients: "milk, flour, carrots, bananas, beef"
 image: /images/pancakes.jpg
