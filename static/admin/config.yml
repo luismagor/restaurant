@@ -9,7 +9,6 @@ collections:
   - name: "menu"
     identifier_field: name
     label: "Menu"
-    format: yaml
     folder: "cms_data"
     create: true
     slug: "{{slug}}"
