@@ -8,5 +8,9 @@ menu-entries:
     ingredients: 'milk, flour, carrots, bananas, beef'
     name: new zealand lamb
     price: 5
+  - image: /images/memphis-burger.jpg
+    ingredients: 'milk, flour, carrots, bananas, beef'
+    name: memphis burger
+    price: 25
 ---
 
