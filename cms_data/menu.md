@@ -12,5 +12,9 @@ menu-entries:
     ingredients: 'milk, flour, carrots, bananas, beef'
     name: memphis burger
     price: 25
+  - image: /images/beef-pizza.jpg
+    ingredients: 'milk, flour, carrots, bananas, beef'
+    name: pizza
+    price: 30
 ---
 
