@@ -5,11 +5,11 @@ import Image from "gatsby-image"
 
 const Product = ({ product }) => {
   const { name, price, ingredients } = product
-  const { description, fixed } = product.image
+  const { fixed } = product.image.childImageSharp
 
   return (
     <ProductWrapper>
-      <Image fixed={fixed} alt={description} className="image" />
+      <Image fixed={fixed} className="image" />
       <div className="text">
         <div className="product-content">
           <h3 className="name">{name}</h3>

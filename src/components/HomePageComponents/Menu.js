@@ -9,17 +9,22 @@ const Menu = () => {
     menu: { edges },
   } = useStaticQuery(graphql`
     {
-      menu: allContentfulMenu {
+      menu: allMarkdownRemark(
+        filter: { frontmatter: { collectionType: { eq: "menu-entries" } } }
+      ) {
         edges {
           node {
             id
-            name
-            price
-            ingredients
-            image {
-              description
-              fixed(width: 150, height: 150) {
-                ...GatsbyContentfulFixed_tracedSVG
+            frontmatter {
+              name
+              ingredients
+              price
+              image {
+                childImageSharp {
+                  fixed(width: 150, height: 150) {
+                    ...GatsbyImageSharpFixed_tracedSVG
+                  }
+                }
               }
             }
           }
@@ -33,7 +38,7 @@ const Menu = () => {
       <Title title="featured items" message="little taste" />
       <ProductList>
         {edges.map(({ node }) => (
-          <Product key={node.id} product={node} />
+          <Product key={node.id} product={node.frontmatter} />
         ))}
       </ProductList>
     </Section>
