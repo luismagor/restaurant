@@ -16,5 +16,9 @@ menu-entries:
     ingredients: 'milk, flour, carrots, bananas, beef'
     name: pizza
     price: 30
+  - image: /images/farm-steak.jpg
+    ingredients: 'milk, flour, carrots, bananas, beef'
+    name: farm steak
+    price: 10
 ---
 
