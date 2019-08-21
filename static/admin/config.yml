@@ -6,9 +6,9 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
-  - name: "menu"
+  - name: "old-menu"
     identifier_field: name
-    label: "Menu"
+    label: "Old Menu"
     folder: "cms_data"
     create: true
     slug: "{{slug}}"
@@ -17,3 +17,24 @@ collections:
       - { label: "Ingredients", name: "ingredients", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Price", name: "price", widget: "number", valueType: "int" }
+
+  - name: "menu"
+    label: "Menu"
+    files:
+      - name: "menu"
+        label: "Menu"
+        file: "cms_data/menu.md"
+        fields:
+          name: "menu-entries"
+          label: "Menu entries"
+          widget: list
+          fields:
+            - { label: "Name", name: "name", widget: "string" }
+            - { label: "Ingredients", name: "ingredients", widget: "string" }
+            - { label: "Image", name: "image", widget: "image" }
+            - {
+                label: "Price",
+                name: "price",
+                widget: "number",
+                valueType: "int",
+              }
