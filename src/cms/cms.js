@@ -1,5 +1,5 @@
 import CMS from "netlify-cms-app"
-import moduleName from "netlify-cms-media-library-cloudinary"
+import cloudinary from "netlify-cms-media-library-cloudinary"
 
 CMS.registerMediaLibrary(cloudinary)
 
