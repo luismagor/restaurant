@@ -1,4 +1,7 @@
 import CMS from "netlify-cms-app"
+import moduleName from "netlify-cms-media-library-cloudinary"
+
+CMS.registerMediaLibrary(cloudinary)
 
 CMS.init({
   config: {
