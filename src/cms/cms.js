@@ -10,15 +10,6 @@ CMS.init({
       config: {
         cloud_name: process.env.GATSBY_CLOUDINARY_CLOUD_NAME,
         api_key: process.env.GATSBY_CLOUDINARY_API_KEY,
-        default_transformations: [
-          [
-            {
-              width: 2000,
-              quality: 80,
-              crop: "limit",
-            },
-          ],
-        ],
       },
     },
   },
