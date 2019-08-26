@@ -8,8 +8,8 @@ CMS.init({
     media_library: {
       name: "cloudinary",
       config: {
-        cloud_name: processs.env.GATSBY_CLOUDINARY_CLOUD_NAME,
-        api_key: processs.env.GATSBY_CLOUDINARY_API_KEY,
+        cloud_name: `${processs.env.GATSBY_CLOUDINARY_CLOUD_NAME}`,
+        api_key: `${processs.env.GATSBY_CLOUDINARY_API_KEY}`,
       },
     },
   },
