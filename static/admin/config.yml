@@ -21,5 +21,10 @@ collections:
         }
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Ingredients", name: "ingredients", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          media_library: { name: cloudinary, output_filename_only: true },
+        }
       - { label: "Price", name: "price", widget: "number", valueType: "int" }
