@@ -1,15 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 import { styles } from "../../utils"
-import Image from "gatsby-image"
+// import Image from "gatsby-image"
 
 const Product = ({ product }) => {
   const { name, price, ingredients } = product
-  const { fixed } = product.image.childImageSharp
+  // const { fixed } = product.image.childImageSharp
 
   return (
     <ProductWrapper>
-      <Image fixed={fixed} className="image" />
+      {/* <Image fixed={fixed} className="image" /> */}
+      <img src={product.image} className="image" />
       <div className="text">
         <div className="product-content">
           <h3 className="name">{name}</h3>

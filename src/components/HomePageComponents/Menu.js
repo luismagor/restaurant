@@ -19,13 +19,7 @@ const Menu = () => {
               name
               ingredients
               price
-              image {
-                childImageSharp {
-                  fixed(width: 150, height: 150) {
-                    ...GatsbyImageSharpFixed_tracedSVG
-                  }
-                }
-              }
+              image
             }
           }
         }
