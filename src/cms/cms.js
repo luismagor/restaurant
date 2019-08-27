@@ -7,10 +7,10 @@ CMS.init({
   config: {
     media_library: {
       name: "cloudinary",
+      output_filename_only: true,
       config: {
         cloud_name: process.env.GATSBY_CLOUDINARY_CLOUD_NAME,
         api_key: process.env.GATSBY_CLOUDINARY_API_KEY,
-        output_filename_only: true,
       },
     },
   },
