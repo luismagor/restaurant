@@ -6,7 +6,8 @@ import styled from "styled-components"
 
 const Menu = () => {
   const {
-    menu: { edges },
+    menu: { edges: menu },
+    images: { edges: images },
   } = useStaticQuery(graphql`
     {
       menu: allMarkdownRemark(
@@ -24,16 +25,37 @@ const Menu = () => {
           }
         }
       }
+
+      images: allFile(filter: { relativePath: { glob: "restaurant/*.jpg" } }) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              fixed(width: 150, height: 150) {
+                ...GatsbyImageSharpFixed_tracedSVG
+              }
+            }
+          }
+        }
+      }
     }
   `)
+
+  let fixedImgs = {}
+  images.forEach(({ node }) => {
+    const key = node.relativePath
+    const value = node.childImageSharp.fixed
+    fixedImgs[key] = value
+  })
 
   return (
     <Section>
       <Title title="featured items" message="little taste" />
       <ProductList>
-        {edges.map(({ node }) => (
-          <Product key={node.id} product={node.frontmatter} />
-        ))}
+        {menu.map(({ node }) => {
+          node.frontmatter.fixed = fixedImgs[node.frontmatter.image]
+          return <Product key={node.id} product={node.frontmatter} />
+        })}
       </ProductList>
     </Section>
   )
