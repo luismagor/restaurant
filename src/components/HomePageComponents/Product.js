@@ -4,8 +4,8 @@ import { styles } from "../../utils"
 import Image from "gatsby-image"
 
 const Product = ({ product }) => {
-  const { name, price, ingredients, fixed } = product
-  // const { fixed } = product.image.childImageSharp
+  const { name, price, ingredients } = product
+  const { fixed } = product.image.childImageSharp
 
   return (
     <ProductWrapper>

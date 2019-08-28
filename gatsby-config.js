@@ -7,12 +7,19 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-remote-images`,
       options: {
-        path: `${__dirname}/static/images`,
-        name: "images",
+        nodeType: "MarkdownRemark",
+        imagePath: "frontmatter.image",
       },
     },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: `static`,
+    //     path: `${__dirname}/static/images`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
