@@ -1,3 +1,6 @@
+# Large images directory
+static/images/restaurant/*
+
 # Logs
 logs
 *.log
