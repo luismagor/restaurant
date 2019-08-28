@@ -13,13 +13,6 @@ module.exports = {
         imagePath: "frontmatter.image",
       },
     },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: `static`,
-    //     path: `${__dirname}/static/images`,
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
