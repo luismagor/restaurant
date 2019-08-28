@@ -10,7 +10,6 @@ const Product = ({ product }) => {
   return (
     <ProductWrapper>
       <Image fixed={fixed} className="image" />
-      {/* <img src={product.image} className="image" alt="" /> */}
       <div className="text">
         <div className="product-content">
           <h3 className="name">{name}</h3>
