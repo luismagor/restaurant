@@ -2,6 +2,7 @@
 collectionType: menu-entries
 name: memphis burger
 ingredients: "milk, flour, carrots, bananas, beef"
-image: restaurant/memphis-burger.jpg
+image: >-
+  https://res.cloudinary.com/luismago/image/upload/v1566933673/restaurant/memphis-burger.jpg
 price: 25
 ---

@@ -2,6 +2,7 @@
 collectionType: menu-entries
 name: pancakes
 ingredients: "milk, flour, carrots, bananas, beef"
-image: restaurant/pancakes.jpg
+image: >-
+  https://res.cloudinary.com/luismago/image/upload/v1566933609/restaurant/pancakes.jpg
 price: 12
 ---
