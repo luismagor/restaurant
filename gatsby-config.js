@@ -64,5 +64,18 @@ module.exports = {
         manualInit: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Restaurant Eatery`,
+        short_name: `Eatery`,
+        description: `Restaurant website built with Gatsby`,
+        start_url: `/`,
+        background_color: `#262626`,
+        theme_color: `#d2aa5c`,
+        display: `browser`,
+        icon: `src/images/icon.png`,
+      },
+    },
   ],
 }
