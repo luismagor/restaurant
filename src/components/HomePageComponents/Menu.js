@@ -10,7 +10,7 @@ const Menu = () => {
   } = useStaticQuery(graphql`
     {
       menu: allMarkdownRemark(
-        filter: { frontmatter: { collectionType: { eq: "menu-entries" } } }
+        filter: { frontmatter: { contentType: { eq: "menu-entries" } } }
       ) {
         edges {
           node {
