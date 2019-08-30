@@ -1,50 +1,24 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 import { styles, Section } from "../../utils"
 import Image from "gatsby-image"
 
-const Gallery = () => {
-  const {
-    allFile: { edges: images },
-  } = useStaticQuery(graphql`
-    {
-      allFile(filter: { relativeDirectory: { eq: "homeGallery" } }) {
-        edges {
-          node {
-            id
-            name
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
+const Gallery = ({ gallery }) => {
   return (
     <Section>
       <GalleryWrapper>
-        {images.map(
-          (
-            {
-              node: {
-                id,
-                name,
-                childImageSharp: { fluid: image },
-              },
-            },
-            i
-          ) => (
-            <div key={id} className={`item item-${i + 1}`}>
-              <Image fluid={image} />
-              <p className="info">{name}</p>
-            </div>
-          )
-        )}
+        <div className={`item item-1`}>
+          <Image fluid={gallery.image1.childImageSharp.fluid} />
+          <p className="info">{gallery.text1}</p>
+        </div>
+        <div className={`item item-2`}>
+          <Image fluid={gallery.image2.childImageSharp.fluid} />
+          <p className="info">{gallery.text2}</p>
+        </div>
+        <div className={`item item-3`}>
+          <Image fluid={gallery.image3.childImageSharp.fluid} />
+          <p className="info">{gallery.text3}</p>
+        </div>
       </GalleryWrapper>
     </Section>
   )

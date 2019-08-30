@@ -14,6 +14,30 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: "MarkdownRemark",
+        imagePath: "frontmatter.gallery.image1",
+        name: "localImage1",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: "MarkdownRemark",
+        imagePath: "frontmatter.gallery.image2",
+        name: "localImage2",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: "MarkdownRemark",
+        imagePath: "frontmatter.gallery.image3",
+        name: "localImage3",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

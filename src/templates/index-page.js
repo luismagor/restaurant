@@ -8,13 +8,11 @@ import Gallery from "../components/HomePageComponents/Gallery"
 import Menu from "../components/HomePageComponents/Menu"
 
 export default ({ data }) => {
-  const {
-    title,
-    address,
-    image,
-    quickinfo,
-    gallery,
-  } = data.markdownRemark.frontmatter
+  const { title, address, quickinfo, gallery } = data.markdownRemark.frontmatter
+  const image = data.markdownRemark.localImage.childImageSharp.fluid.originalImg
+  gallery.image1 = data.markdownRemark.localImage1
+  gallery.image2 = data.markdownRemark.localImage2
+  gallery.image3 = data.markdownRemark.localImage3
 
   return (
     <Layout>
@@ -34,6 +32,34 @@ export default ({ data }) => {
 export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      localImage {
+        childImageSharp {
+          fluid {
+            originalImg
+          }
+        }
+      }
+      localImage1 {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      localImage2 {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      localImage3 {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
       frontmatter {
         title
         address
