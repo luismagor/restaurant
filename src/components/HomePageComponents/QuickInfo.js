@@ -4,19 +4,13 @@ import styled from "styled-components"
 import { styles } from "../../utils"
 import { Link } from "gatsby"
 
-const QuickInfo = () => {
+const QuickInfo = ({ quickinfo }) => {
+  const { message, title, content } = quickinfo
   return (
     <Section>
-      <Title message="let us tell you" title="our mission" />
+      <Title message={message} title={title} />
       <QuickInfoWrapper>
-        <p className="text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque non
-          aut quis similique laborum ipsam quas facere atque libero, deleniti
-          dolorum. Eius maiores quisquam quam quidem incidunt. A quisquam illo
-          eos. Quisquam eum totam animi quaerat explicabo ut exercitationem
-          cupiditate, culpa ab recusandae sed consectetur. Inventore eligendi
-          nihil voluptate possimus.
-        </p>
+        <p className="text">{content}</p>
         <Link to="/about" style={{ textDecoration: "none" }}>
           <SectionButton style={{ margin: "2rem  auto" }}>about</SectionButton>
         </Link>
