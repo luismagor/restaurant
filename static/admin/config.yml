@@ -63,11 +63,11 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Text for image \#1, name: text1, widget: string },
-                  { label: Image \#1, name: image1, widget: image },
-                  { label: Text for image \#2, name: text2, widget: string },
-                  { label: Image \#2, name: image2, widget: image },
-                  { label: Text for image \#3, name: text3, widget: string },
-                  { label: Image \#3, name: image3, widget: image },
+                  { label: Text for image 1, name: text1, widget: string },
+                  { label: Image 1, name: image1, widget: image },
+                  { label: Text for image 2, name: text2, widget: string },
+                  { label: Image 2, name: image2, widget: image },
+                  { label: Text for image 3, name: text3, widget: string },
+                  { label: Image 3, name: image3, widget: image },
                 ],
             }
