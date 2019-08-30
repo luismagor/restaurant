@@ -1,5 +1,5 @@
 ---
-collectionType: menu-entries
+contentType: menu-entries
 name: memphis burger
 ingredients: "milk, flour, carrots, bananas, beef"
 image: >-

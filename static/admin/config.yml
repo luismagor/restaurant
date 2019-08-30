@@ -14,8 +14,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - {
-          label: "Collection Type",
-          name: "collectionType",
+          label: "Content Type",
+          name: "contentType",
           widget: "hidden",
           default: "menu-entries",
         }
