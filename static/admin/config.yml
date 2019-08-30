@@ -23,3 +23,51 @@ collections:
       - { label: "Ingredients", name: "ingredients", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Price", name: "price", widget: "number", valueType: "int" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Home Page"
+        name: "index"
+        fields:
+          - {
+              label: "Content Type",
+              name: "contentType",
+              widget: "hidden",
+              default: "page",
+            }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Address, name: address, widget: string }
+          - { label: Background Image, name: image, widget: image }
+          - {
+              label: Quick Info,
+              name: quickinfo,
+              widget: object,
+              fields:
+                [
+                  { label: Message, name: message, widget: string },
+                  { label: Title, name: title, widget: string },
+                  { label: Content, name: content, widget: text },
+                ],
+            }
+          - {
+              label: Gallery,
+              name: gallery,
+              widget: object,
+              fields:
+                [
+                  { label: Text for image \#1, name: text1, widget: string },
+                  { label: Image \#1, name: image1, widget: image },
+                  { label: Text for image \#2, name: text2, widget: string },
+                  { label: Image \#2, name: image2, widget: image },
+                  { label: Text for image \#3, name: text3, widget: string },
+                  { label: Image \#3, name: image3, widget: image },
+                ],
+            }
